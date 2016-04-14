@@ -26,6 +26,7 @@ namespace IotHubMqttClient
     /// </summary>
     public sealed partial class MainPage : Page
     {
+        // https://azure.microsoft.com/en-us/documentation/articles/iot-hub-mqtt-support/
         const string hubAddress = "MakerDen.azure-devices.net";
         const string hubName = "MqttDevice";
         const string hubPass = "SharedAccessSignature sr=MakerDen.azure-devices.net%2fdevices%2fMqttDevice&sig=sh8ZVK3L4u9XYuTeI%2f3l%2bx7X6D3BRJADz1rppuK3hvw%3d&se=1477701103";
