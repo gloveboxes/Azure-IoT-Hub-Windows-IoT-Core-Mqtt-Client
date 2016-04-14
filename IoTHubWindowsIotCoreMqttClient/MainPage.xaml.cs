@@ -19,7 +19,7 @@ using Windows.UI.Xaml.Navigation;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
-namespace App1
+namespace IotHubMqttClient
 {
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
@@ -44,13 +44,10 @@ namespace App1
             this.client.MqttMsgPublishReceived += Client_MqttMsgPublishReceived;
             this.client.Subscribe(new string[] { hubTopicSubscribe }, new byte[] { 0 });
 
-
             this.client.Connect(hubName, hubUser, hubPass);
 
             Task.Run(async() =>
             {
-
-
                 while (true) {
                     float temperature = 25;
                     string json = "{ temp : " + temperature + " }";
